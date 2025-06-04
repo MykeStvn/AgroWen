@@ -41,3 +41,6 @@ def input_counter(request):
 
 def datepicker(request):
     return render(request, 'datepicker.html')
+
+def home(request):
+    return render(request, 'home.html')

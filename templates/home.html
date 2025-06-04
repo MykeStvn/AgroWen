@@ -1,0 +1,133 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+
+
+<section class="bg-center bg-no-repeat bg-[url('{% static 'img/banner-agro.jpg' %}')] bg-gray-400 bg-blend-multiply">
+    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+        <h1 id="texto-animado"   class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Todo lo que tu cultivo necesita</h1>
+        <p  id="texto-animado" class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Insumos de calidad, asesoría técnica y un compromiso real con tu producción.</p>
+        <div class="flex botones flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+            <a class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300">
+                Ver Productos
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+            <a href="" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                Solicitar Asesoría Gratuita
+            </a>  
+        </div>
+    </div>
+</section>
+
+<!--CONTENEDOR PARA MOSTRAR LAS ZONAS   -->
+<div>
+    <h1 id="productos" class="mb-4 text-3xl text-center font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-4xl mt-10"> Nuestro Productos Destacados</h1>
+</div>
+<div class="flex flex-wrap justify-center">
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm m-3 flex flex-col">
+        <a>
+            <img class="rounded-t-lg object-cover h-48 w-full" src="{% static 'img/sparko.png' %}" alt="" />
+        </a>
+        <div class="p-5 flex flex-col flex-grow">
+            <div class="flex-grow">
+                <a>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SPARKO - 100 G</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 break-words">Sparko es nuestro insecticida que elimina la combinación de plagas de tu cultivo. Cuenta con amplio espectro, doble mecanismo de acción, un excelente perfin ecotoxicológico lo que lo hace un producto ideal para cultivos de exportación.</p>
+            </div>
+            <div class="mt-auto flex justify-center">
+                <a href="" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                    Ver más
+                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm m-3 flex flex-col">
+        <a>
+            <img class="rounded-t-lg object-cover h-48 w-full" src="{% static 'img/jacto.jpg' %}" alt="Jacto SB" />
+        </a>
+        <div class="p-5 flex flex-col flex-grow">
+            <div class="flex-grow">
+                <div class="flex justify-center">                
+                    <a href="">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">JACTO SB - 20L</h5>
+                    </a>
+                </div>
+                <p class="mb-3 font-normal text-gray-700">El Jacto SB es el pulverizador a batería que elimina el esfuerzo manual y brinda una pulverización eficiente y precisa. Su batería de litio-ion es recargable e intercambiable, lo que permite mayor comodidad y autonomía en el trabajo.</p>
+            </div>
+            <div class="mt-auto flex justify-center">
+                <a href="" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                    Ver más
+                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm m-3 flex flex-col">
+        <a >
+            <img class="rounded-t-lg object-cover h-48 w-full" src="{% static 'img/investor.jpg' %}" alt="Investor 1 LT" />
+        </a>
+        <div class="p-5 flex flex-col flex-grow">
+            <div class="flex-grow">
+                <a>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">INVESTOR 1 LT</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700">Fungicida sistémico con acción preventiva, curativa y traslaminar. Inhibidor de la síntesis del ergosterol. Actúa en el hongo patógeno durante la penetración y formación de haustorios.</p>
+            </div>
+            <div class="mt-auto flex justify-center">
+                <a href="" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300">
+                    Ver más
+                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--SECCION DE SERVICIOS-->
+<div id="servicios">
+    <h1 id="servicios" class="mb-4 text-3xl text-center font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-4xl mt-10">Nuestros Servicios</h1>
+</div>
+
+
+
+
+
+
+
+<script>
+    const textoAnimado = new SplitText('#texto-animado', { type: 'words, chars' });
+    gsap.from(textoAnimado.words, {
+            duration: 1,
+            y: 10,
+            stagger: 0.1,
+            autoAlpha: 1,
+            filter: 'blur(20px)',
+        })
+
+    gsap.from(".botones a", {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        delay: 0.5 // Pequeño retraso para que comience después de la animación del texto
+    });
+</script>
+    
+</body>
+
+
+
+{% endblock content %}

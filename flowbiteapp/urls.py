@@ -16,11 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index, accordion, carousel, collapse, dial, dismiss, modal, drawer, dropdown, popover, tabs, tooltip, input_counter, datepicker
+from .views import index, accordion, carousel, collapse, dial, dismiss, modal, drawer, dropdown, popover, tabs, tooltip, input_counter, datepicker, home
+from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),
+    path('', home, name='home'),
     path('accordion', accordion, name='accordion'),
     path('carousel', carousel, name='carousel'),
     path('collapse', collapse, name='collapse'),    
@@ -34,4 +36,10 @@ urlpatterns = [
     path('tooltip', tooltip, name='tooltip'),
     path('input-counter', input_counter, name='input-counter'),
     path('datepicker', datepicker, name='datepicker'),
+    path('home', home, name='home'),
 ]
+
+
+
+if settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()
