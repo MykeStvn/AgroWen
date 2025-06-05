@@ -1,8 +1,8 @@
 node_modules/
 static/CACHE/
 flowbiteapp/__pycache__
-db.sqlite3
 venv/
 env/
 __pycache__/
 vscode/
+db.sqlite3

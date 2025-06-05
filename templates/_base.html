@@ -19,9 +19,11 @@
     <link rel="stylesheet" href="{% static 'src/output.css' %}">
     {% endcompress %}
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <!-- LIBRERIAS PARA ANIMACIONES -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
 </head>
 
@@ -35,7 +37,12 @@
         <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">AgroWen</span>
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <a href="{% url 'login' %}" class="text-white bg-green-700 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-gren-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Iniciar sesión</a>
+      {% if user.is_authenticated %}
+        <i class="fas fa-user-circle text-white mr-2 mt-2">{{ user.username }}</i>
+        <a href="{% url 'users:logout' %}" class="text-white bg-green-700 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-gren-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Cerrar sesión</a>
+      {% else %}
+        <a href="{% url 'users:login' %}" class="text-white bg-green-700 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-gren-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Iniciar sesión</a>
+      {% endif %}
         <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-green-400 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
           <span class="sr-only">Abrir menú</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
