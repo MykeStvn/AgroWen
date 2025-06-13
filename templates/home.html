@@ -3,6 +3,17 @@
 
 {% block content %}
 
+<!-- {% for producto in productos %}
+    {% if producto.stock > 2 %}
+        <div>
+            <p>Hay productos disponibles ESTRELLA😊 {{producto.nombre}} </p>
+        </div>
+    {% else %}
+        <div>
+            <p>No hay productos disponibles ESTRELLA😥 {{producto.nombre}} </p>
+        </div>
+    {% endif %}
+{% endfor %} -->
 
 <section class="bg-center bg-no-repeat bg-[url('{% static 'img/banner-agro.jpg' %}')] bg-gray-400 bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
@@ -26,7 +37,11 @@
 <div>
     <h1 id="productos" class="mb-4 text-3xl text-center font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-4xl mt-10"> Nuestro Productos Destacados</h1>
 </div>
+
+
 <div id="product-cards-container" class="flex flex-wrap justify-center">
+    
+
     <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm m-3 flex flex-col product-card">
         <a>
             <img class="rounded-t-lg object-cover h-48 w-full" src="{% static 'img/sparko.png' %}" alt="" />

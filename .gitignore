@@ -6,3 +6,8 @@ env/
 __pycache__/
 vscode/
 db.sqlite3
+media/
+static/img/productos/
+static/img/usuarios/
+*.log
+local_settings.py

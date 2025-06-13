@@ -24,7 +24,7 @@ def login_view(request):
                 next_url = request.GET.get('next') # Para redirigir si venía de una página protegida
                 if next_url:
                     return redirect(next_url)
-                return redirect('/') # Cambia '/' por tu página principal deseada
+                return redirect('/administration/dashboard') # Cambia '/' por tu página principal deseada
                 # else:
                 #     # Usuario autenticado pero no es admin/staff
                 #     # messages.error(request, "No tienes permisos para acceder.")

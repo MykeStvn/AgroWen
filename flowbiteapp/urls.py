@@ -25,6 +25,7 @@ urlpatterns = [
     path('auth/', include('users.urls')), # Cambié 'accounts/' a 'auth/' para que sea más genérico
     path('', home, name='home'),    
     path('home', home, name='home'),    
+    path('administration/', include('administration.urls')),
 ]
 
 

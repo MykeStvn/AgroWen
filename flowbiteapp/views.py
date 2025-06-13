@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from administration.models import Producto
 def index(request):
     return render(request, 'index.html')
 
@@ -43,6 +44,9 @@ def datepicker(request):
     return render(request, 'datepicker.html')
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'productos': Producto.objects.all()
+    }
+    return render(request, 'home.html', context)
 
 

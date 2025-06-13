@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,8 +33,17 @@
       <div class="relative z-10 text-center">
         <h1 class="text-4xl font-bold mb-4">Bienvenido a <span class="text-yellow-300">AgroWen</span></h1>
         <p class="text-lg mb-8">Tu aliado estratégico en agricultura sostenible</p>
-        <img src="https://cdn-icons-png.flaticon.com/512/3079/3079158.png" alt="Agricultura" class="w-64 h-64 mx-auto">
+        <img src="{% static 'img/logo-agrowen.png' %}" alt="Logo AgroWen" class="w-64 h-64 mx-auto">
       </div>
+      <button>
+      <a href="{% url 'home' %}" class="mt-6 px-2 py-1 bg-white text-green-600 rounded-lg font-semibold shadow-md hover:shadow-lg transition duration-300 transform hover:scale-105 flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+        </svg>
+        Volver al inicio
+      </a>
+      </button>
+
       
     </div>
 
